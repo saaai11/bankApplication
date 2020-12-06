@@ -1,0 +1,46 @@
+<html>
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <title>Add Money</title>
+</head>
+
+<body>
+  <div class="main">
+    <p class="sign" align="center">Add Money</p>
+    <form class="form1" [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+    	<div class="row">
+
+
+ 		<div class="col-md-6 padd-left"><h5> Enter Amount</h5></div>
+    		<div class="col-md-6 padd-left1">
+<input class="un " type="number" maxlength="5" align="center" placeholder="Amount" formControlName="amount">
+    		</div>
+
+    	</div>
+
+      <button class="submit" align="center" type="submit" [disabled]="myForm.invalid">
+      	<a >Add Money</a>
+      </button>
+
+
+
+
+      <div class="col-md-12">
+      	<h5 class="header-txt">
+      		Since we are not a valid bank registered with the United Kingdom, we provide the oppurtunity for you to add money to your account and complete transactions who are registered with this bank.Thank you!!
+      	</h5>
+      </div>
+
+
+
+         </form>
+
+
+    </div>
+
+</body>
+
+</html>

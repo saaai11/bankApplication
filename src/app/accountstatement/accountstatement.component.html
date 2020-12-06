@@ -1,0 +1,69 @@
+<html>
+   <head>
+      <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <title>Account Statement</title>
+   </head>
+   <body>
+      <div class="container main-div">
+         <div class="card">
+            <div class="card-header">
+
+               <h5>Account Statement</h5>
+
+            </div>
+            <div class="card-block table-border-style">
+               <div class="table-responsive">
+                 <table class="table table-hover">
+                    <tbody>
+
+                      <tr>
+                        <th>Account Number </th>
+                        <th>Credit </th>
+                        <th>Debit </th>
+                        <th>Date </th>
+                        <th>Time </th>
+                        <th>Account Balance </th>
+
+                      </tr>
+
+                     <tr *ngFor = "let transact of transactions">
+
+                       <td>
+                          <h6 class="mb-1">{{transact.beneficiaryId}}</h6>
+                       </td>
+
+
+                       <td>
+                          <h6 class="mb-1">{{transact.credit}}</h6>
+                       </td>
+                       <td>
+                          <h6 class="mb-1">{{transact.debit}}</h6>
+                       </td>
+
+
+                       <td>
+                         <h6 class="mb-1">{{transact.date}}</h6>
+                       </td>
+
+                       <td>
+                          <h6 class="mb-1">{{transact.time}}</h6>
+                       </td>
+                       <td>
+                          <h6 class="mb-1">{{transact.accountBalance}}</h6>
+                       </td>
+                     </tr>
+
+
+
+
+
+                    </tbody>
+                  </table>
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>
